@@ -1,65 +1,63 @@
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-     <style>
-         body {
-         background-color: gray;
-
-         }
-        button {
-         font-size: 20px;
-         }
-         #left_btn {
-           float: left;
-           margin-left: 25%;
-         }
-
-         #right_btn {
-           float: right;
-           margin-right: 25%;
-         }
-         #image_source {
-           width: 50%;
-           height: 50%;
-           display: block;
-           margin-left: 25%;
-         }
-
-     </style>
-</head>
-<body>
-        <img src="" id="image_source">
-        <button id="left_btn"  onclick="prev_img()">&#60;&#60;</button>
-        <button id="right_btn" onclick="next_img()">&#62;&#62;</button>
-
-   <script>
-      var i = 0;
-      var images = ['1','2','3','4','5','6'];
-      var source = document.getElementById("image_source");
-      source.src = 'images/' + images[0] + '.jpg'; 
-
-      function prev_img() {
-              if( i !== 0 ){
-                i--;
-              }else{
-                i = images.length-1;
-              }
-           source.src = 'images/' + images[i] + '.jpg';
+    <style>
+      body {
+        background-color: black;
       }
 
-   function  next_img(){
+      button {
+        font-size: 20px;
+      }
 
-    if( i !== images.length-1 ){
-             i++ ;
-        }else{
-            i = 0;
-        }  
-        source.src = 'images/' + images[i] + '.jpg';    
-   }
+      #left_btn {
+        float: left;
+        margin-left: 25%;
+      }
 
-   </script>
-</body>
+      #right_btn {
+        float: right;
+        margin-right: 25%;
+      }
+
+      #image_source {
+        width: 50%;
+        height: 50%;
+        display: block;
+        margin-left: 25%;
+      }
+    </style>
+  </head>
+  <body>
+    <img src="" id="image_source" />
+    <button id="left_btn" onclick="prev_img()">&#60;&#60;</button>
+    <button id="right_btn" onclick="next_img()">&#62;&#62;</button>
+
+    <script>
+      var i = 0;
+      var images = ["1", "2", "3", "4", "5", "6"];
+      var source = document.getElementById("image_source");
+      source.src = "images/" + images[0] + ".jpg";
+      function prev_img() {
+        if (i !== 0) {
+          i--;
+        } else {
+          i = images.length - 1;
+        }
+        source.src = "images/" + images[i] + ".jpg";
+      }
+
+      function next_img() {
+        if (i !== images.length - 1) {
+          i++;
+        } else {
+          i = 0;
+        }
+        source.src = "images/" + images[i] + ".jpg";
+      }
+    </script>
+  </body>
 </html>
